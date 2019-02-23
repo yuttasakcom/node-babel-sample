@@ -1,0 +1,25 @@
+{
+  "name": "node-babel-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js --exec babel-node",
+    "build": "babel src/index.js --out-dir build --presets=@babel/env",
+    "start": "npm run build && node build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
